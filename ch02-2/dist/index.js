@@ -26,11 +26,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var Person_1 = __importDefault(require("./person/Person"));
-var chance_1 = __importDefault(require("chance"));
-var R = __importStar(require("ramda"));
-var chance = new chance_1.default();
-var persons = R.range(0, 2).map(function (n) { return new Person_1.default(chance.name(), chance.age()); });
+const Person_1 = __importDefault(require("./person/Person"));
+const chance_1 = __importDefault(require("chance"));
+const R = __importStar(require("ramda"));
+const chance = new chance_1.default();
+let persons = R.range(0, 2).map((n) => new Person_1.default(chance.name(), chance.age()));
 console.log(persons);
 // const testMakePerson = (): void => {
 //   let jane: IPerson = makePerson("jane");
